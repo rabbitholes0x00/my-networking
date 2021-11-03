@@ -1,0 +1,15 @@
+# Terms
+* Client - 
+* IP - 
+* Ports - 
+* DHCP - 
+* Switch - 
+* Access Point - 
+* Server - 
+* Router - 
+* NAT - 
+* Firewall - 
+* ISP - 
+* FCS - 
+* ARP - 
+* VLAN - 

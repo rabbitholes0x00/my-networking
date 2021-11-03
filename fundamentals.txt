@@ -1,0 +1,43 @@
+#[Network-Fundamentals]
+
+A <==========> B
+protocol(tcp/ip)
+
+Jaringan komputer adalah komputer yang saling terhubung dan dapat berkomunikasi dari satu komputer ke komputer lainnya menggunakan protocol tertentu
+
+#[OSI-Model]
+All People Seems To Need Data Processing
+
+---
+Software-Engineer, Data-Handling, Upper-Layer
+
+L7 APPLICATION
+input->process->output, auth
+
+L6 PRESENTATION
+compression & enc/decryption, desc-format-data: text, img, audio, video
+
+L5 SESSION
+share-resources
+
+---
+Network-Engineer, Data-Transport, Lower-Layer
+
+L4 TRANSPORT
+virtual-conn-management, flow-control(bandwith), error-recovery, 8segmentation
+
+L3 NETWORK
+routing(router)
+
+L2 DATA LINK
+switching(switch), error-detection
+
+L1 PHYSICAL(bitstream, copper, fo, wireless, hub, repeater)
+bitstream, copper, wireless, hub
+
+
+#[Notes]
+* IP
+* DHCP
+* NAT
+* PORT

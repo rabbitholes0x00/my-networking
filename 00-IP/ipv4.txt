@@ -1,0 +1,85 @@
+# IPv4
+IP merupakan identitas setiap perangkat yang terhubung pada jaringan komputer
+
+# IP Private
+* [A] 10.0.0.0 - 10.255.255.255
+* [B] 172.16.0.0 - 172.31.255.255
+* [C] 192.168.0.0 - 192.168.255.255
+
+# Notes
+* My IPv4[C] = 192.168.1.8/24
+	* 192.168.1 = NetworkID(Uniform)[Router] to connect local
+	* 192 = 
+	* 168 =  
+	* 1 = 
+	* 8 = HostID(Unique)[Device] to connect local
+	* /24 = Prefix or CIDR, menjelaskan berapa banyak sebuah ip dalam sebuah network
+* IPv4 Max = 32bit
+* IPv4 Total = 2^32-24 = 2^8 = 256
+* IPv4 Useable = 254, 256 - 2 = 254(IPRange)
+* IPv4 UnUseable = (IPNetwork)/FirstIP & (IPBroadcat)/LastIP
+* IPRange = 192.168.1.1/24 - 192.168.1.254/24
+* IPNetwork =  192.168.1.0/24
+* IPBroadcast = 192.168.1.255/24
+
+# Keynotes
+* Type of IP Communications:
+	* Unicast - metode komunikasi antar sebuah host atau point-to-point. Contoh: HTTP
+	* Broadcast - metode komunikasi dari sebuah host ke semua host yang masih dalam satu jaringan. Alamat broadcast digunakan dalam komunikasi one-to-everyone. Contoh: ARP Ethernet.
+	* Multicast - metode komunikasi dari sebuah host ke banyak host yang bergabung dalam group multicast yang sama. Alamat multicast digunakan dalam komunikasi one-to-many. Contoh: Video Streaming.
+	* Anycast - metode komunikasi dari sebuah host ke host atau kelompok host lain yang diset memiliki IP sama. Contoh : 6to4 relay.
+
+## Binary to Decimal
+1.1.1.1.1.1.1.1
+128.64.32.16.8.4.2.1
+
+1, 1, 0, 0, 0, 0, 0, 0
+- 128 + 64 = 192
+1, 0, 1, 0, 1, 0, 0, 0
+- 128 + 32 + 8 = 168 
+0, 0, 0, 0, 0, 0, 1, 0
+- 2
+0, 1, 1, 1, 1, 0, 1, 1
+- 64 + 32 + 16 + 8  + 2 + 1 = 123
+
+## Decimal to Binary
+1.1.1.1.1.1.1.1
+128.64.32.16.8.4.2.1
+
+138, 10, 10, 10, 10, 2, 2, 0
+128, 64, 32, 16, 8, 4, 2, 1
+  1,  0,  0,  0, 1, 0, 1, 0
+
+115, 51, 19,  3, 3, 3, 3, 1 
+128, 64, 32, 16, 8, 4, 2, 1
+  0,  1,  1,  1, 0, 0, 1, 1
+
+## Netmask & Prefix
+left to right
+255, 255, 255, 0 = /24 
+255, 255,   0, 0 = /16
+255,   0,   0, 0 = /8
+
+* 255 = Netmask
+* /24 = Prefix
+
+11111111 = 8 digit binary
+255.255.255.0  = 11111111.11111111.11111111.00000000
+255.255.0.0 = 11111111.11111111.00000000.00000000
+255.0.0.0 = 11111111.00000000.00000000.00000000
+
+### Prefix to Netmask
+left to right
+/19 = 11111111.11111111.11100000.00000000
+		= 255.255.224
+
+### Netmask to Prefix
+left to right
+255.255.252.0 = 11111111.11111111.11111100.00000000 = /22
+
+## Network Address AND Operations
+1.1.0.0
+1.0.1.0
+results: 1.0.0.0
+
+
